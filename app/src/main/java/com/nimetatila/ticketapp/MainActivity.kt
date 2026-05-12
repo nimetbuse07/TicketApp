@@ -10,6 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 import com.nimetatila.core.ui.theme.Surface
 import com.nimetatila.core.ui.theme.TicketAppTheme
+import com.nimetatila.ticketapp.navigation.AppNavHost
+import com.nimetatila.ticketapp.screen.LoginScreen
 
 
 class MainActivity : ComponentActivity() {
@@ -18,9 +20,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TicketAppTheme {
-                Surface(modifier = Modifier.fillMaxSize()){
-                    Text("App is ready")
-                }
+                AppNavHost()
             }
         }
     }

@@ -19,3 +19,25 @@ interface AuthApi {
     @POST("/auth/refresh")
     suspend fun refresh(@Body body: RefreshRequestDto): TokenPairDto
 }
+//API ile konuşan en alt seviye katman
+//Retrofit için yazılmış bir API katmanı
+//endpointlere POST atar
+//body olarak email/Password gönderir
+//response olarak token alır
+
+//Retrofit arka planda:
+//-HTTP request oluşturur
+//-JSON'a çevirir
+//-server'a yollar
+//-cevabı alır
+//DTO'ya çevirir
+
+//suspend => network işlemi
+//ana thread'i bloklamaması lazım
+//coroutine ile çalışır
+
+//DTO => API ile konuşurken kullanılan veri formatı
+//request => CredentialsDto
+//response => TokenPairDto
+
+//direkt backende bağlı, API değişirse burasıdeğişebilir
